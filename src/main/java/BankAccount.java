@@ -1,4 +1,4 @@
-import java.util.Random;
+//import java.util.Random;
 
 /**
  * Class implementing a bank account.
@@ -9,30 +9,83 @@ import java.util.Random;
  */
 public class BankAccount {
 
-    /*
-     * You may want to use this to distinguish between different kinds of accounts.
+    /**
+     * ???
      */
     public enum BankAccountType {
+        /**?*/
         CHECKINGS,
+        /**?*/
         SAVINGS,
+        /**?*/
         STUDENT,
+        /**?*/
         WORKPLACE
     }
 
+    /**Nothing important.*/
     private int accountNumber;
+    /**Nothing important.*/
+    @SuppressWarnings("checkstyle:visibilitymodifier")
     public BankAccountType accountType;
+    /**Nothing important.*/
     private double accountBalance;
+    /**Nothing important.*/
     private String ownerName;
+    /**Nothing important.*/
+    @SuppressWarnings("checkstyle:visibilitymodifier")
     public double interestRate;
+    /**Nothing important.*/
     private double interestEarned;
 
+    /**
+     * Something.
+     * @param name a
+     * @param accountCategory a
+     */
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        ownerName = name;
+        accountType = accountCategory;
+        Bank.totalAccounts++;
     }
 
-    /*
-     * Implement getters and setters as appropriate for private variables.
+    /**
+     * something.
+     * @return a
      */
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    /**
+     * something.
+     * @return a
+     */
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    /**
+     * something.
+     * @return a
+     */
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+
+    /**
+     * something.
+     * @param a a
+     */
+    public void setAccountBalance(final double a) {
+        accountBalance = a;
+    }
+
+    /**
+     * something.
+     * @return a
+     */
+    public double getInterestEarned() {
+        return interestEarned;
+    }
 }
